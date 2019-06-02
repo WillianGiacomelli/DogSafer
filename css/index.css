@@ -1,0 +1,170 @@
+
+#navfont i,#navfont{
+    color:white;
+}
+
+header{
+    background-image:url(../img/1.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position-y: 40%;
+    border-radius:0;
+    opacity:0.9;
+    width:100%;
+    height:100vh;
+}
+
+@media (max-width: 768px) {
+  header{
+    background-size:cover;
+    background-position-x: 20%;
+    border-radius:0;
+    opacity:0.9;
+    width:100%;
+    height:100vh;
+  }
+}
+
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#hero h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#button1{
+    border: 1px solid #97d700;
+    background: #97d700;
+    padding: 10px 20px;
+    border-radius:40px;
+}
+
+#button1:hover{
+    background-color:white;
+    border:1px solid white;
+    color:black;
+}
+
+#button2{
+    border: 1px solid #ff5964;
+    background: #ff5964;
+    padding: 10px 20px;
+    border-radius:40px;
+}
+
+#button2:hover{
+    background-color:white;
+    color:#ff5964;
+}
+
+#coleira{
+    width:70%;
+    height:auto;
+}
+
+#iphone{
+    width:60%;
+    height:auto;
+}
+
+h2{
+  color:#ff5964;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+p{
+  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.75;
+}
+
+.content2{
+    background-color: #00C9D9;
+    padding:160px 0;
+}
+
+
+#iphonemaps{
+    width:100%;
+    height:auto;
+}
+
+#footer{
+    background-color: #077187;
+    text-align: center;
+}
+
+.icon:hover{
+    color:rgb(0,255,0);
+}
+
+#fugitivos{
+    background-image:url(../img/dogneo2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    display:table;
+    width:100%;
+    height:80vh; 
+    opacity:0.9;
+}
+
+#fugitivos h1{
+    text-align: center;
+    color:rgb(255,255,255);
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-top:25%;
+}
+
+#fugitivos p{
+    text-align: center;
+    color:rgb(255,255,255);
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.icon1{
+  border:1px solid #000000;
+}
+
+@media (max-width: 768px) {
+  .content2{
+    padding-right: 50px;
+  }
+
+}
