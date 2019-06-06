@@ -2,22 +2,29 @@
 
 include 'conexao.php';
 
-$nome = $_REQUEST['nome'];
-$cpf = $_REQUEST['cpf'];
-$email = $_REQUEST['email'];
-$telefone = $_REQUEST['telefone'];
-$cep = $_REQUEST['cep'];
-$rua = $_REQUEST['rua'];
-$numero = $_REQUEST['numero'];
-$bairro = $_REQUEST['bairro'];
-$cidade = $_REQUEST['cidade'];
-$estado = $_REQUEST['uf'];
-$senha = sha1(md5($_REQUEST["senha"]));
+if(isset($_POST['nome'])){
 
-$query = "insert into cliente(idCliente,nome,email,telefone,cep,rua,numero,bairro,cidade,estado,senha)
+$nome = $_POST['nome'];
+$cpf = $_POST['cpf'];
+$email = $_POST['email'];
+$telefone = $_POST['telefone'];
+$cep = $_POST['cep'];
+$rua = $_POST['rua'];
+$numero = $_POST['numero'];
+$bairro = $_POST['bairro'];
+$cidade = $_POST['cidade'];
+$estado = $_POST['uf'];
+$senha = sha1(md5($_POST["senha"]));
+
+$query = "insert into cliente(idCliente,nome,email,celular,cep,rua,numero,bairro,cidade,estado,senha)
     values (NULL,'$nome','$email','$telefone','$cep','$rua','$numero','$bairro','$cidade','$estado','$senha')";
 
-mysqli_query($conexao,$query);
 
-echo "<script>window.location.href='./login.html;</script>";
+
+mysqli_query($conexao,$query);
+//$id= mysql_insert_id();
+//die($id);
+
+echo "<script>window.location.href='../login.html';</script>";
+}
 ?>

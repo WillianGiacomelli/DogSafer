@@ -2,7 +2,6 @@
     
    require_once("./classes/conexao.php");
    require_once("./classes/admin.php");
-   require_once("./classes/incluir.php");
 
 ?>
 
@@ -10,7 +9,7 @@
 <html lang="pt">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+    <meta http-equiv="Content-Type" content="text/html" charset=utf-8″>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -59,7 +58,7 @@
 
     <div class="container" id="cadastro1">
         <h1 class="my-5">Cadastro usuário</h1>
-    <form id = "form" name="frmPrincipal" action="login.html" method="POST">
+    <form id = "form" name="frmPrincipal" action="./classes/incluir.php" method="POST">
             <div class="form-row">
                 <div class="form-group col-sm-12">
                     <label for="nome">Nome</label>

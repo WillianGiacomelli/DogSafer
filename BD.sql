@@ -1,6 +1,11 @@
 CREATE DATABASE DogSafer;
 USE DogSafer;
 
+CREATE TABLE animal(
+    idAnimal int(11) primary key auto_increment not null,
+    nome varchar(20)
+);
+
 CREATE TABLE cliente (
     idCliente int(11) not null primary key auto_increment,
 	idAnimal int(11),
@@ -11,15 +16,11 @@ CREATE TABLE cliente (
     CEP varchar(10),
     rua varchar(40),
     bairro varchar(40),
+    numero varchar(4),
     cidade varchar(40),
     estado varchar(20),
     senha varchar(50),
 	CONSTRAINT fk_cli_animal FOREIGN KEY (idAnimal) REFERENCES animal (idAnimal)
-);
-
-CREATE TABLE animal(
-    idAnimal int(11) primary key auto_increment not null,
-    nome varchar(20)
 );
 
 CREATE TABLE coleira(
