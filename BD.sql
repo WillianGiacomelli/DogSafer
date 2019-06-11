@@ -12,7 +12,7 @@ CREATE TABLE cliente (
     nome varchar(50),
     email varchar(40),
     cpf varchar(13),
-    celular int(11),
+    celular varchar(20),
     CEP varchar(10),
     rua varchar(40),
     bairro varchar(40),

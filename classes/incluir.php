@@ -15,16 +15,22 @@ $bairro = $_POST['bairro'];
 $cidade = $_POST['cidade'];
 $estado = $_POST['uf'];
 $senha = sha1(md5($_POST["senha"]));
+$nomepet = $_POST['nomepet'];
+
 
 $query = "insert into cliente(idCliente,nome,email,celular,cep,rua,numero,bairro,cidade,estado,senha)
     values (NULL,'$nome','$email','$telefone','$cep','$rua','$numero','$bairro','$cidade','$estado','$senha')";
 
-
-
 mysqli_query($conexao,$query);
-//$id= mysql_insert_id();
-//die($id);
 
-echo "<script>window.location.href='../login.html';</script>";
+$id= mysqli_insert_id();
+
+$query2 = "insert into animal(nome) values ('$nomepet') where idAnimal = '$id'";
+
+mysqli_query($conexao,$query2);
+
+	
+
+echo "<script>window.location.href='../login.php';</script>";
 }
 ?>
