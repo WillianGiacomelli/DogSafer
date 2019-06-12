@@ -21,11 +21,12 @@ $nomepet = $_POST['nomepet'];
 $query = "insert into cliente(idCliente,nome,email,celular,cep,rua,numero,bairro,cidade,estado,senha)
     values (NULL,'$nome','$email','$telefone','$cep','$rua','$numero','$bairro','$cidade','$estado','$senha')";
 
-mysqli_query($conexao,$query);
+$conexao->query($query);
+$id = $conexao->insert_id;
 
-$id= mysqli_insert_id();
 
-$query2 = "insert into animal(nome) values ('$nomepet') where idAnimal = '$id'";
+$query2 = "insert into animal(nome, idCliente) values ('$nomepet', '$id')";
+
 
 mysqli_query($conexao,$query2);
 
