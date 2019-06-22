@@ -1,0 +1,23 @@
+#footer{
+    background-color: #077187;
+    text-align: center;
+    margin-top:600px;
+}
+
+nav{
+	background-color: #282828;
+}
+
+#formadmin{
+    margin-top:100px;
+}
+
+#table_cliente{
+    margin-top:125px;
+}
+
+@media(max-width:768px){
+    #footer{
+        margin-top:400px;
+    }
+}

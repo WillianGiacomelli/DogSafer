@@ -25,7 +25,7 @@ if(mysqli_num_rows($consulta) >= 1){
     }
     else
     {
-        header('location:../User/usuario.php');
+        header('location:../User/user.php');
     }
     //die("não foi");
 

@@ -1,4 +1,5 @@
-<?php 
+<?php
+    
     session_start();
     if(isset($_SESSION['login'])) {
         if($_SESSION['usuario'] != true){
@@ -9,7 +10,6 @@
          header('location:../login.php');
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -39,14 +39,14 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <button type="button" class="navbar-toggler mr-auto" data-toggle="collapse" data-target="#menu"><span class="navbar-toggler-icon"></span></button>
-        <a class="navbar-brand" href="#">
+           <a class="navbar-brand" href="#">
             <img src="img/logodogsafer6.png" alt="logodogsaferweb" height="40px">
-        </a>
+           </a>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav">
                     <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-home"></i>Incluir Número</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Alterar</a></li>
-                    <li class="nav-item"><a href="clientes.php" class="nav-link">Ver clientes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Ver clientes</a></li>
                 </ul>
                 <?php if(isset($_SESSION['login'])){ ?>
                 <a href="logout.php" class="btn ml-auto" style="color:#ffffff;">Sair</i></a>
@@ -55,21 +55,32 @@
             </div>
         </div>
     </nav>
-
-    <div class="container">
-        <form method="post" id="formadmin" action="../classes/incluirnum.php">
-            <div class="form-row">
-                <div class="form-group col-sm-4">
-                    <label for="idAnimal">Id do animal</label>
-                    <input type="text" name="idanimal" id="idAnimal" placeholder="Id do animal" class="form-control" title="Digite apenas números">
-                </div>
-                <div class="form-group col-sm-8">
-                    <label for="numColeira">Número para rastreio da coleira</label>
-                    <input type="text" name="numColeira" id="numColeira" placeholder="Número da coleira" class="form-control" title="Digite um número de celular">
-                </div>
-                <button type = "submit" class="btn btn-lg btn-block btn-success text-uppercase">Incluir</button>
-            </div>
-        </form>
+<div class="container">
+<table id="table_cliente" class="table table-sm table-striped">
+ <div class="table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">CPF</th>
+      <th scope="col">Celular</th>
+    </tr>
+  </thead>
+  <?php 
+      include '../classes/buscadados.php';
+      while($linha = mysqli_fetch_array($consulta_clientes)){
+          echo '<tbody>';
+          echo '<tr><th scope="row">'.$linha['idCliente'].'</th>';
+          echo '<td>'.$linha['nome'].'</td>';
+          echo '<td>'.$linha['email'].'</td>';
+          echo '<td>'.$linha['cpf'].'</td>';
+          echo '<td>'.$linha['celular'].'</td></tr>';
+          echo '</tbody>' ;
+      }
+  ?>
+</table>
+    </div>
     </div>
 
     <section class="footer">
@@ -115,9 +126,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
-    <script>
-      $("#numColeira").mask("(00) 00000-0009");
-    </script>
 </body>
 
 </html>

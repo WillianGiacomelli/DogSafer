@@ -18,8 +18,8 @@ $senha = sha1(md5($_POST["senha"]));
 $nomepet = $_POST['nomepet'];
 
 
-$query = "insert into cliente(idCliente,nome,email,celular,cep,rua,numero,bairro,cidade,estado,senha)
-    values (NULL,'$nome','$email','$telefone','$cep','$rua','$numero','$bairro','$cidade','$estado','$senha')";
+$query = "insert into cliente(idCliente,nome,email,cpf,celular,cep,rua,numero,bairro,cidade,estado,senha)
+    values (NULL,'$nome','$email', '$cpf','$telefone','$cep','$rua','$numero','$bairro','$cidade','$estado','$senha')";
 
 $conexao->query($query);
 $id = $conexao->insert_id;

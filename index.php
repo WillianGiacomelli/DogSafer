@@ -31,15 +31,15 @@
         <a class="navbar-brand" href="#">
             <img src="img/logodogsafer6.png" alt="logodogsaferweb" height="40px">
         </a>
-            <a href="login.html" class="btn d-lg-none ml-auto" style="color:#ffffff;"><i class="fas fa-user"></i></a>
+            <a href="login.php" class="btn d-lg-none ml-auto" style="color:#ffffff;"><i class="fas fa-user"></i></a>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav">
-                    <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Home</a></li>
+                    <li class="nav-item active"><a href="index.php" class="nav-link"><i class="fas fa-home"></i>Home</a></li>
                     <li class="nav-item"><a href="institucional.html" class="nav-link">Institucional</a></li>
                     <li class="nav-item"><a href="produto.html" class="nav-link">Produto</a></li>
                 </ul>
-                <a href="cart.php" class="btn ml-auto" style="color:#ffffff;"><i class="fas fa-shopping-cart"></i></a>
-                <a href="login.html" class="btn d-none d-sm-none d-md-none d-lg-block" style="border-radius:40px;border:1px solid #00DBB4;color:#ffffff;"><i class="fas fa-user mr-2"></i>Área do cliente</a></a>
+                <a href="cart.html" class="btn ml-auto" style="color:#ffffff;"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.php" class="btn d-none d-sm-none d-md-none d-lg-block" style="border-radius:40px;border:1px solid #00DBB4;color:#ffffff;"><i class="fas fa-user mr-2"></i>Área do cliente</a></a>
             </div>
         </div>
     </nav>

@@ -25,7 +25,7 @@
    </head>
    <body>
       <div class="container" align="left">
-         <a class="btn btn-outline-light" id="voltar" href="index.html">
+         <a class="btn btn-outline-light" id="voltar" href="index.php">
          Voltar
          </a>
       </div>
